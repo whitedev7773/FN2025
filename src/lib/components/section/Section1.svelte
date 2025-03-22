@@ -31,6 +31,7 @@
 	div {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 30px;
 	}
 
@@ -41,6 +42,10 @@
 		position: absolute;
 		z-index: 10;
 		bottom: 10%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		width: 270px;
 		height: 60px;
