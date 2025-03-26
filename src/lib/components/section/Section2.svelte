@@ -43,7 +43,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--navy);
+		background-color: var(--light-navy);
 
 		overflow: hidden;
 	}
