@@ -19,8 +19,8 @@
 		{ text: 'INTRODUCTION', scroll_to: '#introducion' },
 		{ text: 'SESSION', scroll_to: '#sessions' },
 		{ text: 'SPONSERS', scroll_to: '#sponsers' },
-		{ text: 'LOCATION', scroll_to: '#location' },
-		{ text: 'FAQ', scroll_to: '#faq' }
+		{ text: 'LOCATION', scroll_to: '#location' }
+		// { text: 'FAQ', scroll_to: '#faq' }
 	];
 </script>
 

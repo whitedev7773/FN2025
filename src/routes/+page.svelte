@@ -1,7 +1,13 @@
 <script lang="ts">
 	import bg_video from '$lib/assets/background_media.mp4';
+	import Footer from '$lib/components/Footer.svelte';
 	import Section1 from '$lib/components/section/Section1.svelte';
 	import Section2 from '$lib/components/section/Section2.svelte';
+	import Section3 from '$lib/components/section/Section3.svelte';
+	import Section4 from '$lib/components/section/Section4.svelte';
+	import Section5 from '$lib/components/section/Section5.svelte';
+	import Section6 from '$lib/components/section/Section6.svelte';
+	import Section9 from '$lib/components/section/Section9.svelte';
 </script>
 
 <!-- FIXED -->
@@ -13,6 +19,12 @@
 <!-- SCROLL -->
 <Section1 id="home" />
 <Section2 id="introducion" />
+<Section3 id="fn2025" />
+<Section4 id="sessions" />
+<Section5 id="sponsers" />
+<Section6 id="location" />
+<Section9 id="fn2025" />
+<Footer />
 
 <style>
 	div {

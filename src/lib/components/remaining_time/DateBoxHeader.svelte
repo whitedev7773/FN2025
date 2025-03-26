@@ -5,7 +5,7 @@
 </script>
 
 <div>
-	<Text fontSize="14px" fontWeight="600" textAlign="center">
+	<Text fontSize="14px" fontWeight="600" textAlign="center" disable_animation={true}>
 		{text}
 	</Text>
 </div>

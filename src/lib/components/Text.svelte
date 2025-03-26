@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let tag = 'p'; // 기본값은 'p'
 	export let className = '';
 	export let style = '';
@@ -37,8 +39,40 @@
 		text-align: ${textAlign};
 		${style}
 	`;
+
+	let isVisible = false;
+	let element: HTMLElement;
+
+	export let disable_animation = false;
+
+	onMount(() => {
+		if (disable_animation) {
+			isVisible = true;
+			return;
+		}
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					isVisible = entry.isIntersecting;
+				});
+			},
+			{ threshold: 1 } // 100% 보이면 트리거
+		);
+
+		if (element) observer.observe(element);
+
+		return () => {
+			if (element) observer.unobserve(element);
+		};
+	});
 </script>
 
-<svelte:element this={tag} class={className} style={computedStyle}>
+<svelte:element
+	this={tag}
+	bind:this={element}
+	class={className}
+	style={`${computedStyle}; opacity: ${isVisible ? 1 : 0}; transition: opacity 0.6s 0.3s;`}
+>
 	<slot />
 </svelte:element>
