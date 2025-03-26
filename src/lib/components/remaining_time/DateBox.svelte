@@ -13,7 +13,8 @@
 	<div class="datebox-content" style={`transform: translateY(-${display_number * 114}px)`}>
 		{#each numberList as number}
 			<div class="datebox-content-number">
-				<Text fontSize="45px" fontWeight="700" color="black">{number}</Text>
+				<Text fontSize="45px" fontWeight="700" color="black" disable_animation={true}>{number}</Text
+				>
 			</div>
 		{/each}
 	</div>

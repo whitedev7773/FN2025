@@ -9,7 +9,7 @@
 
 <div>
 	<img width={logo_size} height={logo_size} src={Logo} alt="{text}의 로고" />
-	<Text fontSize="25px" fontWeight="700">{text}</Text>
+	<Text fontSize="25px" fontWeight="700" disable_animation={true}>{text}</Text>
 </div>
 
 <style>

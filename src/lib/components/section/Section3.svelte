@@ -9,9 +9,13 @@
 
 <section {id}>
 	<div id="first-line">
-		<Text className="shadow-for-dark" fontSize="86px" fontWeight="700">함수달은</Text>
+		<Text className="shadow-for-dark" fontSize="86px" fontWeight="700" disable_animation={true}
+			>함수달은</Text
+		>
 		<BoxedMessage />
-		<Text className="shadow-for-dark" fontSize="60px" fontWeight="400">까지</Text>
+		<Text className="shadow-for-dark" fontSize="60px" fontWeight="400" disable_animation={true}
+			>까지</Text
+		>
 	</div>
 	<div id="second-line">
 		<Text

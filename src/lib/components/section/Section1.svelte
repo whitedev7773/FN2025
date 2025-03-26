@@ -14,7 +14,9 @@
 		<Text fontSize="40px" fontWeight="400" textAlign="center">함수달이 준비한 첫번째 세미나</Text>
 	</div>
 	<button class="shadow-for-dark">
-		<Text color="white" fontSize="24px" fontWeight="400" textAlign="center">참가 신청하기</Text>
+		<Text color="white" fontSize="24px" fontWeight="400" textAlign="center" disable_animation={true}
+			>참가 신청하기</Text
+		>
 	</button>
 </section>
 

@@ -17,11 +17,13 @@
 
 <footer>
 	<div id="logo">
-		<Text fontSize="30px" fontWeight="700">FN 2025</Text>
+		<Text fontSize="30px" fontWeight="700" disable_animation={true}>FN 2025</Text>
 		<img src={PresentedBy} alt="Presented By Fun-Sudal" />
 	</div>
 	<div style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
-		<Text fontSize="16px" fontWeight="400" color="#7f7f7f">funsudalofficial@gmail.com</Text>
+		<Text fontSize="16px" fontWeight="400" color="#7f7f7f" disable_animation={true}
+			>funsudalofficial@gmail.com</Text
+		>
 		<div class="sns-link-list">
 			{#each sns_link as [icon, link]}
 				<NetworkIcon imageSrc={icon} {link} />
