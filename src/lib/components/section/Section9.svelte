@@ -54,4 +54,30 @@
 		right: -213px;
 		transform: translateY(-50%);
 	}
+
+	@media (max-width: 768px) {
+		section {
+			height: 100px;
+		}
+
+		.peeeup {
+			width: auto;
+			height: 130px;
+			left: -50px;
+		}
+
+		.au {
+			width: auto;
+			height: 180px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.iieung {
+			width: auto;
+			height: 160px;
+			right: -90px;
+		}
+	}
 </style>

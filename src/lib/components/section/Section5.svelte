@@ -12,11 +12,11 @@
 </script>
 
 <section {id}>
-	<Text fontSize="69px" fontWeight="700">SPONSERS</Text>
+	<Text fontSize="69px" fontWeight="700" mobileFontSize="30px">SPONSERS</Text>
 	<div id="main-container">
 		{#each logo_list as logo}
-			<div style="width: 280px">
-				<img src={logo} alt={logo} />
+			<div id="sponser-logo">
+				<img src={logo} alt={logo} width="100%" />
 			</div>
 		{/each}
 	</div>
@@ -47,10 +47,6 @@
 		opacity: 0.5;
 	}
 
-	img {
-		border-radius: 10px;
-	}
-
 	#container {
 		display: flex;
 		flex-direction: column;
@@ -62,5 +58,20 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		gap: 10px;
+	}
+
+	#sponser-logo {
+		width: 280px;
+	}
+
+	@media (max-width: 768px) {
+		#main-container {
+			flex-direction: column;
+			gap: 0px;
+		}
+
+		#sponser-logo {
+			width: 200px;
+		}
 	}
 </style>
