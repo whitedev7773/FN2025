@@ -52,4 +52,15 @@
 		position: relative;
 		transition: width 0.5s cubic-bezier(0.49, 0.15, 0.36, 1.37);
 	}
+
+	@media (max-width: 768px) {
+		div {
+			width: 320px;
+			height: 60px;
+		}
+
+		p {
+			font-size: 26px !important;
+		}
+	}
 </style>

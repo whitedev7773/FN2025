@@ -25,12 +25,13 @@
 <!-- SCROLL -->
 <Section1 id="home" />
 <Section2 id="introducion" />
-<!-- <Section3 id="fn2025" /> -->
-<!-- <Section4 id="sessions" /> -->
-<!-- <Section5 id="sponsers" /> -->
-<!-- <Section6 id="location" /> -->
-<!-- <Section9 id="fn2025" /> -->
+<Section3 id="fn2025" />
+<Section4 id="sessions" />
+<Section5 id="sponsers" />
+<Section6 id="location" />
+<Section9 id="fn2025" />
 <Footer />
+
 <!-- FIXED -->
 <Intro />
 

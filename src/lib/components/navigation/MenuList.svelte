@@ -5,8 +5,11 @@
 	import type { MenuButtonType } from '$lib/utils/MenuButtonType';
 	import { MenuOpen } from '$lib/stores/MenuOpen';
 
+	$: isTouch = false;
+
 	// 첫접속 시 #에 붙은 주소 확인 후 그 곳으로 미리 scroll
 	onMount(() => {
+		window.addEventListener('touchstart', () => (isTouch = true));
 		const hash = window.location.hash;
 		if (hash) {
 			const target = document.querySelector(hash);
@@ -41,7 +44,11 @@
 
 <div
 	bind:this={div}
-	style="opacity: {$MenuOpen ? 1 : 0}; pointer-events: {$MenuOpen ? 'auto' : 'none'}"
+	style="opacity: {$MenuOpen ? 1 : 0}; pointer-events: {!isTouch
+		? 'auto'
+		: $MenuOpen
+			? 'auto'
+			: 'none'}"
 >
 	{#each items as item}
 		<MenuButton text={item.text} scrollTo={item.scroll_to} disabled={item.disabled} />
@@ -64,6 +71,13 @@
 		outline: none;
 	}
 
+	/* pc 반응형 */
+	@media (min-width: 769px) {
+		div {
+			opacity: 1 !important;
+		}
+	}
+
 	@media (max-width: 768px) {
 		button.hamburger {
 			display: block;
@@ -77,7 +91,7 @@
 			width: 100%;
 			height: 100vh;
 			padding-top: 60px;
-			backdrop-filter: blur(20px) brightness(0.3);
+			background-color: #000000dd;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;

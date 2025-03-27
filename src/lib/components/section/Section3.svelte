@@ -9,12 +9,20 @@
 
 <section {id}>
 	<div id="first-line">
-		<Text className="shadow-for-dark" fontSize="86px" fontWeight="700" disable_animation={true}
-			>함수달은</Text
+		<Text
+			className="shadow-for-dark"
+			fontSize="86px"
+			fontWeight="700"
+			disable_animation={true}
+			mobileFontSize="46px">함수달은</Text
 		>
 		<BoxedMessage />
-		<Text className="shadow-for-dark" fontSize="60px" fontWeight="400" disable_animation={true}
-			>까지</Text
+		<Text
+			className="shadow-for-dark"
+			fontSize="60px"
+			fontWeight="400"
+			disable_animation={true}
+			mobileFontSize="40px">까지</Text
 		>
 	</div>
 	<div id="second-line">
@@ -22,6 +30,7 @@
 			className="shadow-for-dark"
 			fontSize="86px"
 			fontWeight="700"
+			mobileFontSize="46px"
 			style="
 				background: linear-gradient(90deg, #7FF8FC 0%, #2ECC71 100%);
 				background-clip: text;
@@ -67,5 +76,28 @@
 
 	div#second-line {
 		justify-content: flex-end;
+	}
+
+	/* 모바일일 땐 모두 세로로 정렬 */
+	@media (max-width: 768px) {
+		section {
+			padding: 0 20px;
+		}
+
+		div {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+		}
+
+		div#first-line {
+			justify-content: center;
+			gap: 10px;
+		}
+
+		div#second-line {
+			justify-content: center;
+		}
 	}
 </style>

@@ -23,8 +23,8 @@
 			logo_y = -50;
 			logo_opacity = 1;
 			setTimeout(() => {
-				logo_x = 20;
-				text_x = -90;
+				logo_x = 35;
+				text_x = -85;
 				text_opacity = 1;
 				setTimeout(() => {
 					circle_scale = 1;

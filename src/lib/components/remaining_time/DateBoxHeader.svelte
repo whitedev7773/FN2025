@@ -5,7 +5,13 @@
 </script>
 
 <div>
-	<Text fontSize="14px" fontWeight="600" textAlign="center" disable_animation={true}>
+	<Text
+		fontSize="14px"
+		fontWeight="600"
+		textAlign="center"
+		disable_animation={true}
+		mobileFontSize="12px"
+	>
 		{text}
 	</Text>
 </div>

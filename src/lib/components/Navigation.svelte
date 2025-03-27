@@ -20,7 +20,7 @@
 		left: 0;
 		width: 100%;
 		background-color: transparent;
-		z-index: 9000;
+		z-index: 1000;
 
 		display: flex;
 		align-items: center;
