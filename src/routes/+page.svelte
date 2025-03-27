@@ -1,6 +1,7 @@
 <script lang="ts">
 	import bg_video from '$lib/assets/background_media.mp4';
 	import Footer from '$lib/components/Footer.svelte';
+	import Intro from '$lib/components/Intro.svelte';
 	import Section1 from '$lib/components/section/Section1.svelte';
 	import Section2 from '$lib/components/section/Section2.svelte';
 	import Section3 from '$lib/components/section/Section3.svelte';
@@ -25,6 +26,8 @@
 <Section6 id="location" />
 <Section9 id="fn2025" />
 <Footer />
+<!-- FIXED -->
+<Intro />
 
 <style>
 	div {
