@@ -11,6 +11,11 @@
 	import Section9 from '$lib/components/section/Section9.svelte';
 </script>
 
+<svelte:head>
+	<title>FN 2025</title>
+	<meta name="description" content="함수달이 준비한 첫번째 세미나, FN 2025" />
+</svelte:head>
+
 <!-- FIXED -->
 <div>
 	<video autoplay muted loop id="bg_video">
@@ -20,11 +25,11 @@
 <!-- SCROLL -->
 <Section1 id="home" />
 <Section2 id="introducion" />
-<Section3 id="fn2025" />
-<Section4 id="sessions" />
-<Section5 id="sponsers" />
-<Section6 id="location" />
-<Section9 id="fn2025" />
+<!-- <Section3 id="fn2025" /> -->
+<!-- <Section4 id="sessions" /> -->
+<!-- <Section5 id="sponsers" /> -->
+<!-- <Section6 id="location" /> -->
+<!-- <Section9 id="fn2025" /> -->
 <Footer />
 <!-- FIXED -->
 <Intro />

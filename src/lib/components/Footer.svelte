@@ -17,12 +17,18 @@
 
 <footer>
 	<div id="logo">
-		<Text fontSize="30px" fontWeight="700" disable_animation={true}>FN 2025</Text>
-		<img src={PresentedBy} alt="Presented By Fun-Sudal" />
+		<Text fontSize="30px" fontWeight="700" disable_animation={true} mobileFontSize="20px"
+			>FN 2025</Text
+		>
+		<img id="presented_by" src={PresentedBy} alt="Presented By Fun-Sudal" />
 	</div>
-	<div style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
-		<Text fontSize="16px" fontWeight="400" color="#7f7f7f" disable_animation={true}
-			>funsudalofficial@gmail.com</Text
+	<div id="contact" style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
+		<Text
+			fontSize="16px"
+			fontWeight="400"
+			color="#7f7f7f"
+			mobileFontSize="16px"
+			disable_animation={true}>funsudalofficial@gmail.com</Text
 		>
 		<div class="sns-link-list">
 			{#each sns_link as [icon, link]}
@@ -56,5 +62,28 @@
 		display: flex;
 		flex-direction: row;
 		gap: 10px;
+	}
+
+	@media (max-width: 768px) {
+		footer {
+			padding: 20px 30px;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		#logo {
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		img#presented_by {
+			height: 26px;
+		}
+
+		#contact {
+			flex-direction: column-reverse !important;
+			gap: 0px;
+			padding-bottom: 20px;
+		}
 	}
 </style>

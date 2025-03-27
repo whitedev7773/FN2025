@@ -8,14 +8,21 @@
 
 <section {id}>
 	<div id="title" class="shadow-for-dark">
-		<Text fontSize="128px" fontWeight="900" textAlign="center"
+		<Text fontSize="128px" fontWeight="900" textAlign="center" mobileFontSize="70px"
 			><span style="color: var(--dark-green)">FN</span> 2025</Text
 		>
-		<Text fontSize="40px" fontWeight="400" textAlign="center">함수달이 준비한 첫번째 세미나</Text>
+		<Text fontSize="40px" fontWeight="400" textAlign="center" mobileFontSize="24px"
+			>함수달이 준비한 첫번째 세미나</Text
+		>
 	</div>
 	<button class="shadow-for-dark">
-		<Text color="white" fontSize="24px" fontWeight="400" textAlign="center" disable_animation={true}
-			>참가 신청하기</Text
+		<Text
+			color="white"
+			fontSize="24px"
+			fontWeight="400"
+			textAlign="center"
+			mobileFontSize="20px"
+			disable_animation={true}>참가 신청하기</Text
 		>
 	</button>
 </section>
@@ -53,5 +60,17 @@
 		height: 60px;
 		border-radius: 30px;
 		background-color: #031a8d;
+	}
+
+	@media (max-width: 768px) {
+		div {
+			gap: 10px;
+		}
+
+		button {
+			width: 200px;
+			height: 50px;
+			border-radius: 25px;
+		}
 	}
 </style>

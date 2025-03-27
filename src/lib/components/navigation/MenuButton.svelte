@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { MenuOpen } from '$lib/stores/MenuOpen';
+
 	export let text = '';
 	export let scrollTo = '';
 	export let disabled = false;
 
 	// id를 가진 첫번째 오브젝트로 스크롤
 	const scrollToElement = () => {
-		console.log(scrollTo);
+		MenuOpen.set(false);
+		// console.log(scrollTo);
 		const element = document.getElementById(scrollTo);
 		if (!element) return;
 		element.scrollIntoView({ behavior: 'smooth' });
@@ -50,5 +53,11 @@
 
 	a:hover::after {
 		background-color: #2ecc71;
+	}
+
+	@media (max-width: 768px) {
+		a {
+			font-size: 18px;
+		}
 	}
 </style>

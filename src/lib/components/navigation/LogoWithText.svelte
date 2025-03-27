@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Logo from '$lib/assets/logo.svg';
-	import Text from '$lib/components/Text.svelte';
 
 	export let text = '';
 
@@ -9,7 +8,7 @@
 
 <div>
 	<img width={logo_size} height={logo_size} src={Logo} alt="{text}의 로고" />
-	<Text fontSize="25px" fontWeight="700" disable_animation={true}>{text}</Text>
+	<p>{text}</p>
 </div>
 
 <style>
@@ -17,5 +16,21 @@
 		display: flex;
 		align-items: center;
 		gap: 8px;
+	}
+
+	p {
+		font-size: 25px;
+		font-weight: 700;
+	}
+
+	@media (max-width: 768px) {
+		img {
+			width: 36px;
+			height: 36px;
+		}
+
+		p {
+			font-size: 18px !important;
+		}
 	}
 </style>
