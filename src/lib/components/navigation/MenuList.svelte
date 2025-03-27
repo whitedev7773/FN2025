@@ -3,6 +3,7 @@
 
 	import MenuButton from '$lib/components/navigation/MenuButton.svelte';
 	import type { MenuButtonType } from '$lib/utils/MenuButtonType';
+	import { MenuOpen } from '$lib/stores/MenuOpen';
 
 	// 첫접속 시 #에 붙은 주소 확인 후 그 곳으로 미리 scroll
 	onMount(() => {
@@ -22,9 +23,26 @@
 		{ text: 'LOCATION', scroll_to: '#location' }
 		// { text: 'FAQ', scroll_to: '#faq' }
 	];
+
+	let div: HTMLDivElement | null = null;
+	$: MenuOpen;
+
+	// 햄버거 버튼 클릭 시 메뉴 보이기
+	function openMenu() {
+		if (!div) {
+			return;
+		}
+
+		MenuOpen.set(!$MenuOpen);
+	}
 </script>
 
-<div>
+<button on:click={openMenu} class="hamburger"> ☰ </button>
+
+<div
+	bind:this={div}
+	style="opacity: {$MenuOpen ? 1 : 0}; pointer-events: {$MenuOpen ? 'auto' : 'none'}"
+>
 	{#each items as item}
 		<MenuButton text={item.text} scrollTo={item.scroll_to} disabled={item.disabled} />
 	{/each}
@@ -35,5 +53,38 @@
 		display: flex;
 		align-items: center;
 		gap: 60px;
+	}
+
+	button.hamburger {
+		display: none;
+		color: white;
+		z-index: 10000;
+		background-color: transparent;
+		border: none;
+		outline: none;
+	}
+
+	@media (max-width: 768px) {
+		button.hamburger {
+			display: block;
+			font-size: 30px;
+		}
+
+		div {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			padding-top: 60px;
+			backdrop-filter: blur(20px) brightness(0.3);
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s;
+		}
 	}
 </style>

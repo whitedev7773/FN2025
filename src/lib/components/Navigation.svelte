@@ -40,4 +40,11 @@
 		background-color: #ffffff20 !important;
 		backdrop-filter: blur(10px);
 	}
+
+	@media (max-width: 768px) {
+		div {
+			height: 70px;
+			padding: 0px 20px;
+		}
+	}
 </style>

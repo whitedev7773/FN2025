@@ -27,25 +27,40 @@
 	export let color = 'inherit';
 	export let textAlign = 'left';
 
-	// 스타일 객체 생성
-	const computedStyle = `
-		width: ${w};
-		height: ${h};
-		margin: ${mTop || m} ${mRight || m} ${mBottom || m} ${mLeft || m};
-		padding: ${pTop || p} ${pRight || p} ${pBottom || p} ${pLeft || p};
-		font-size: ${fontSize};
-		font-weight: ${fontWeight};
-		color: ${color};
-		text-align: ${textAlign};
-		${style}
-	`;
+	// 모바일용 폰트 사이즈
+	export let mobileFontSize: string | null = null;
 
+	// 스타일 객체 생성
+	let computedStyle = '';
 	let isVisible = false;
 	let element: HTMLElement;
 
 	export let disable_animation = false;
 
+	const updateStyle = () => {
+		const isMobile = window.matchMedia('(max-width: 768px)').matches;
+		const appliedFontSize = isMobile ? (mobileFontSize ?? fontSize) : fontSize;
+
+		computedStyle = `
+			width: ${w};
+			height: ${h};
+			margin: ${mTop || m} ${mRight || m} ${mBottom || m} ${mLeft || m};
+			padding: ${pTop || p} ${pRight || p} ${pBottom || p} ${pLeft || p};
+			font-size: ${appliedFontSize};
+			font-weight: ${fontWeight};
+			color: ${color};
+			text-align: ${textAlign};
+			${style}
+		`;
+	};
+
 	onMount(() => {
+		updateStyle();
+
+		// 반응형 업데이트를 위해 resize 이벤트 추가
+		const resizeListener = () => updateStyle();
+		window.addEventListener('resize', resizeListener);
+
 		if (disable_animation) {
 			isVisible = true;
 			return;
@@ -63,6 +78,7 @@
 		if (element) observer.observe(element);
 
 		return () => {
+			window.removeEventListener('resize', resizeListener);
 			if (element) observer.unobserve(element);
 		};
 	});
