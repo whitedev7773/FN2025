@@ -17,7 +17,7 @@
 					>학교에서 알려주지 않는 GPT 사용법</Text
 				>
 				<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="13px"
-					>by. 최강민 (해달에듀 대표)</Text
+					>by. 최강민 (해달프로그래밍 대표)</Text
 				>
 			</div>
 			<div id="textbox" class="text-with-label-2">
