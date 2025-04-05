@@ -2,7 +2,7 @@
 	import '$lib/styles/color.css';
 	import '$lib/styles/effects.css';
 	import Text from '$lib/components/Text.svelte';
-	import RemainingTime from '../RemainingTime.svelte';
+	import RemainingTime from '$lib/components/RemainingTime.svelte';
 
 	import peeeup from '$lib/assets/v.svg'; // ㅍ
 	import au from '$lib/assets/j.svg'; // ㅓ

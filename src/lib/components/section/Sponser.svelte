@@ -3,12 +3,11 @@
 	import Text from '$lib/components/Text.svelte';
 
 	import funSudal from '$lib/assets/sponser/funsudal.png';
-	import kert from '$lib/assets/sponser/kert.png';
 	import swKnuEdu from '$lib/assets/sponser/sw_knu_edu.png';
 
 	export let id = '';
 
-	const logo_list = [funSudal, kert, swKnuEdu];
+	const logo_list = [funSudal, swKnuEdu];
 </script>
 
 <section {id}>
@@ -26,7 +25,7 @@
 	section {
 		width: 100%;
 		box-sizing: border-box;
-		padding: 300px 0;
+		padding: 100px 0;
 
 		position: relative;
 
