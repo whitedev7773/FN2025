@@ -21,7 +21,6 @@
 	import Decoration from '$lib/components/section/Decoration.svelte';
 
 	// sectionScrollY에 div의 스크롤값 저장
-
 	onMount(() => {
 		const div = document.querySelector('#section_page');
 		if (div) {

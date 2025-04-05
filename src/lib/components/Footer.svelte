@@ -27,19 +27,19 @@
 			<a href="./policy">개인정보보호정책</a>
 			<a href="./rule">행동강령</a>
 		</div>
-	</div>
-	<div id="contact" style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
-		<Text
-			fontSize="16px"
-			fontWeight="400"
-			color="#7f7f7f"
-			mobileFontSize="16px"
-			disable_animation={true}>funsudalofficial@gmail.com</Text
-		>
-		<div class="sns-link-list">
-			{#each sns_link as [icon, link]}
-				<NetworkIcon imageSrc={icon} {link} />
-			{/each}
+		<div id="contact" style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
+			<Text
+				fontSize="16px"
+				fontWeight="400"
+				color="#7f7f7f"
+				mobileFontSize="16px"
+				disable_animation={true}>funsudalofficial@gmail.com</Text
+			>
+			<div class="sns-link-list">
+				{#each sns_link as [icon, link]}
+					<NetworkIcon imageSrc={icon} {link} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </footer>
