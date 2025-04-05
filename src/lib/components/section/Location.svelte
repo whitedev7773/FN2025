@@ -12,9 +12,9 @@
 	<div id="main-container">
 		<img src={MapImage} alt="map" height="340px" />
 		<div id="textbox" class="text-with-label-1">
-			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">간략한 장소를 입력</Text>
+			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">경북대학교 대구캠퍼스</Text>
 			<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="14px"
-				>여기에 상세주소를 입력합니다.</Text
+				>IT대학 4호관 지하1층 DIY실</Text
 			>
 		</div>
 	</div>

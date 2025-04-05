@@ -10,22 +10,18 @@
 <section {id}>
 	<Text fontSize="69px" fontWeight="700" mobileFontSize="30px">SESSION</Text>
 	<div id="main-container">
-		<img src={PosterImage} alt="map" width="340px" />
+		<img src={PosterImage} alt="map" width="327px" />
 		<div id="container">
 			<div id="textbox" class="text-with-label-1">
 				<Text fontSize="38px" fontWeight="700" mobileFontSize="20px"
 					>학교에서 알려주지 않는 GPT 사용법</Text
 				>
-				<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="13px"
-					>by. 최강민 (해달프로그래밍 대표)</Text
-				>
 			</div>
 			<div id="textbox" class="text-with-label-2">
-				<Text fontSize="26px" fontWeight="600" mobileFontSize="16px">세션 소개</Text>
 				<Text fontSize="16px" fontWeight="400" color="#A5A5A5" mobileFontSize="13px">
-					여기에 세션 소개를 아주아주 멋있고 기이이일게 작성합니다.
+					모두가 GPT를 사용하는 세상에서 어떻게 살아나가야 할까요?
 					<br />
-					여기에 세션 소개를 아주아주 멋있고 기이이일게 작성합니다.
+					GPT가 말을 듣게 할 수 있는 총알을 여러분들에게 나눠드릴게요.
 				</Text>
 			</div>
 		</div>
@@ -85,11 +81,13 @@
 		}
 
 		img {
-			width: 80%;
+			width: 200px;
 		}
 
-		.text-with-label-1 {
-			margin-top: 30px;
+		#container {
+			gap: 10px;
+			box-sizing: border-box;
+			padding: 20px;
 		}
 	}
 </style>

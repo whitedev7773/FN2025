@@ -1,14 +1,35 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	import '$lib/styles/global.css';
+
+	import Cursor from '$lib/components/Cursor.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import { sectionScrollY } from '$lib/stores/SectionScrollY';
+
 	import bg_video from '$lib/assets/background_media.mp4';
 	import Footer from '$lib/components/Footer.svelte';
 	import Intro from '$lib/components/Intro.svelte';
-	import Section1 from '$lib/components/section/Section1.svelte';
-	import Section2 from '$lib/components/section/Section2.svelte';
-	import Section3 from '$lib/components/section/Section3.svelte';
-	import Section4 from '$lib/components/section/Section4.svelte';
-	import Section5 from '$lib/components/section/Section5.svelte';
-	import Section6 from '$lib/components/section/Section6.svelte';
-	import Section9 from '$lib/components/section/Section9.svelte';
+
+	import MainSection from '$lib/components/section/MainSection.svelte';
+	import Introduction from '$lib/components/section/Introduction.svelte';
+	import Brand from '$lib/components/section/Brand.svelte';
+	import Session from '$lib/components/section/Session.svelte';
+	import Lecturer from '$lib/components/section/Lecturer.svelte';
+	import Sponser from '$lib/components/section/Sponser.svelte';
+	import Location from '$lib/components/section/Location.svelte';
+	import Decoration from '$lib/components/section/Decoration.svelte';
+
+	// sectionScrollY에 div의 스크롤값 저장
+
+	onMount(() => {
+		const div = document.querySelector('#section_page');
+		if (div) {
+			div.addEventListener('scroll', () => {
+				sectionScrollY.set(div.scrollTop);
+			});
+		}
+	});
 </script>
 
 <svelte:head>
@@ -16,26 +37,39 @@
 	<meta name="description" content="함수달이 준비한 첫번째 세미나, FN 2025" />
 </svelte:head>
 
-<!-- FIXED -->
-<div>
-	<video autoplay muted loop id="bg_video">
-		<source src={bg_video} type="video/mp4" />
-	</video>
-</div>
-<!-- SCROLL -->
-<Section1 id="home" />
-<Section2 id="introducion" />
-<Section3 id="fn2025" />
-<Section4 id="sessions" />
-<Section5 id="sponsers" />
-<Section6 id="location" />
-<Section9 id="fn2025" />
-<Footer />
-
-<!-- FIXED -->
 <Intro />
+<Cursor />
+<Navigation />
+<div id="section_page">
+	<!-- FIXED -->
+	<div>
+		<video autoplay muted loop id="bg_video">
+			<source src={bg_video} type="video/mp4" />
+		</video>
+	</div>
+	<!-- SCROLL -->
+	<MainSection id="home" />
+	<Introduction id="introducion" />
+	<Brand id="fn2025" />
+	<Session id="sessions" />
+	<Lecturer id="lecturer" />
+	<Sponser id="sponsers" />
+	<Location id="location" />
+	<Decoration id="fn2025" />
+	<Footer />
+</div>
 
 <style>
+	#section_page {
+		scroll-behavior: smooth;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+
+	#section_page::-webkit-scrollbar {
+		display: none;
+	}
+
 	div {
 		position: fixed;
 		top: 0;

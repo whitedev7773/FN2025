@@ -15,16 +15,21 @@
 			>함수달이 준비한 첫번째 세미나</Text
 		>
 	</div>
-	<button class="shadow-for-dark">
+	<a
+		class="shadow-for-dark"
+		href="https://docs.google.com/forms/d/10d30iOI2bHDYqljQaq73zVONoJHoEGp7UIdbnCkpdWs/edit"
+		target="_blank"
+	>
 		<Text
 			color="white"
 			fontSize="24px"
 			fontWeight="400"
 			textAlign="center"
 			mobileFontSize="20px"
+			style="text-decoration: none;"
 			disable_animation={true}>참가 신청하기</Text
 		>
-	</button>
+	</a>
 </section>
 
 <style>
@@ -44,7 +49,7 @@
 		gap: 30px;
 	}
 
-	button {
+	a {
 		border: none;
 		outline: none;
 
@@ -67,7 +72,7 @@
 			gap: 10px;
 		}
 
-		button {
+		a {
 			width: 200px;
 			height: 50px;
 			border-radius: 25px;

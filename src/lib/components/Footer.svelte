@@ -16,11 +16,17 @@
 </script>
 
 <footer>
-	<div id="logo">
-		<Text fontSize="30px" fontWeight="700" disable_animation={true} mobileFontSize="20px"
-			>FN 2025</Text
-		>
-		<img id="presented_by" src={PresentedBy} alt="Presented By Fun-Sudal" />
+	<div id="logo-and-policy">
+		<div id="logo">
+			<Text fontSize="30px" fontWeight="700" disable_animation={true} mobileFontSize="20px"
+				>FN 2025</Text
+			>
+			<img id="presented_by" src={PresentedBy} alt="Presented By Fun-Sudal" />
+		</div>
+		<div id="policy-link-list">
+			<a href="./policy">개인정보보호정책</a>
+			<a href="./rule">행동강령</a>
+		</div>
 	</div>
 	<div id="contact" style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
 		<Text
@@ -64,6 +70,26 @@
 		gap: 10px;
 	}
 
+	#logo-and-policy {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 50px;
+	}
+
+	#policy-link-list {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+
+	#policy-link-list a {
+		color: #7f7f7f;
+		font-size: 16px;
+		font-weight: 400;
+		text-decoration: none;
+	}
+
 	@media (max-width: 768px) {
 		footer {
 			padding: 20px 30px;
@@ -84,6 +110,11 @@
 			flex-direction: column-reverse !important;
 			gap: 0px;
 			padding-bottom: 20px;
+		}
+
+		#logo-and-policy {
+			flex-direction: column;
+			gap: 40px;
 		}
 	}
 </style>
