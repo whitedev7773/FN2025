@@ -24,7 +24,7 @@
 
 <style>
 	.animated-text {
-		font-size: 45px;
+		font-size: clamp(26px, 2.5vw, 45px);
 		font-weight: 700;
 		margin: 0;
 		animation: fadeSlide 0.5s cubic-bezier(0.49, 0.15, 0.36, 1.37);
@@ -42,18 +42,19 @@
 	}
 
 	div {
-		width: 583px;
-		height: 125px;
+		/* width: 583px; */
+		/* height: 125px; */
+		width: clamp(340px, 35vw, 583px);
+		height: clamp(70px, 6.5vw, 125px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border: 4px solid white;
 		overflow: hidden;
 		position: relative;
-		transition: width 0.5s cubic-bezier(0.49, 0.15, 0.36, 1.37);
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		div {
 			width: 320px;
 			height: 60px;

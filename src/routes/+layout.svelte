@@ -19,8 +19,6 @@
 	});
 </script>
 
-<Cursor />
-<Navigation />
 <div id="section_page">
 	<slot />
 </div>
@@ -30,5 +28,9 @@
 		scroll-behavior: smooth;
 		height: 100vh;
 		overflow-y: scroll;
+	}
+
+	div::-webkit-scrollbar {
+		display: none;
 	}
 </style>

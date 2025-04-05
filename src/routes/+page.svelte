@@ -40,36 +40,24 @@
 <Intro />
 <Cursor />
 <Navigation />
-<div id="section_page">
-	<!-- FIXED -->
-	<div>
-		<video autoplay muted loop id="bg_video">
-			<source src={bg_video} type="video/mp4" />
-		</video>
-	</div>
-	<!-- SCROLL -->
-	<MainSection id="home" />
-	<Introduction id="introducion" />
-	<Brand id="fn2025" />
-	<Session id="sessions" />
-	<Lecturer id="lecturer" />
-	<Sponser id="sponsers" />
-	<Location id="location" />
-	<Decoration id="fn2025" />
-	<Footer />
+<!-- FIXED -->
+<div>
+	<video autoplay muted loop id="bg_video">
+		<source src={bg_video} type="video/mp4" />
+	</video>
 </div>
+<!-- SCROLL -->
+<MainSection id="home" />
+<Introduction id="introducion" />
+<Brand id="fn2025" />
+<Session id="sessions" />
+<Lecturer id="lecturer" />
+<Sponser id="sponsers" />
+<Location id="location" />
+<Decoration id="fn2025" />
+<Footer />
 
 <style>
-	#section_page {
-		scroll-behavior: smooth;
-		height: 100vh;
-		overflow-y: scroll;
-	}
-
-	#section_page::-webkit-scrollbar {
-		display: none;
-	}
-
 	div {
 		position: fixed;
 		top: 0;

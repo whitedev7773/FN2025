@@ -70,7 +70,7 @@
 		gap: 10px;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		section {
 			padding: 100px 0;
 		}

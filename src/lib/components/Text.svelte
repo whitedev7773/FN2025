@@ -38,7 +38,7 @@
 	export let disable_animation = false;
 
 	const updateStyle = () => {
-		const isMobile = window.matchMedia('(max-width: 768px)').matches;
+		const isMobile = window.matchMedia('(max-width: 1000px)').matches;
 		const appliedFontSize = isMobile ? (mobileFontSize ?? fontSize) : fontSize;
 
 		computedStyle = `

@@ -72,13 +72,13 @@
 	}
 
 	/* pc 반응형 */
-	@media (min-width: 769px) {
+	@media (min-width: 1001px) {
 		div {
 			opacity: 1 !important;
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		button.hamburger {
 			display: block;
 			font-size: 30px;

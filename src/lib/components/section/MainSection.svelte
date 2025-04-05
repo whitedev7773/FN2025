@@ -52,6 +52,7 @@
 	a {
 		border: none;
 		outline: none;
+		text-decoration: none;
 
 		position: absolute;
 		z-index: 10;
@@ -67,7 +68,7 @@
 		background-color: #031a8d;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		div {
 			gap: 10px;
 		}

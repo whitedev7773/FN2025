@@ -33,7 +33,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 100px;
+		gap: 70px;
 
 		background-color: var(--navy);
 	}
@@ -63,7 +63,7 @@
 		width: 280px;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		#main-container {
 			flex-direction: column;
 			gap: 0px;

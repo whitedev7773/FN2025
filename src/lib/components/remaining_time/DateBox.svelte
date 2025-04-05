@@ -60,7 +60,7 @@
 		align-items: center;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		div.datebox {
 			width: 80px;
 			height: 110px;

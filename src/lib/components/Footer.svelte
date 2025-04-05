@@ -90,7 +90,7 @@
 		text-decoration: none;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		footer {
 			padding: 20px 30px;
 			flex-direction: column;

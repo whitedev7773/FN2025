@@ -55,7 +55,7 @@
 		background-color: #2ecc71;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		a {
 			font-size: 18px;
 		}
