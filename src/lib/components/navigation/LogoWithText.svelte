@@ -23,7 +23,7 @@
 		font-weight: 700;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		img {
 			width: 36px;
 			height: 36px;

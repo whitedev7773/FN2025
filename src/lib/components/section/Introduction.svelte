@@ -54,8 +54,20 @@
 	}
 
 	img {
+		filter: invert(0.5);
 		position: absolute;
 		user-select: none;
+
+		transition:
+			top 0.4s ease-in-out,
+			left 0.4s ease-in-out,
+			bottom 0.4s ease-in-out,
+			right 0.4s ease-in-out,
+			filter 0.2s ease-out;
+	}
+
+	img:hover {
+		filter: invert(0);
 	}
 
 	.peeeup {
@@ -78,9 +90,31 @@
 		right: -391px;
 	}
 
+	@media (max-width: 1000px) {
+		.peeeup {
+			top: 0px;
+			left: -10px;
+		}
+
+		.au {
+			bottom: -50px;
+			right: 0px;
+		}
+
+		.iieung-bottom {
+			bottom: -200px;
+			left: -303px;
+		}
+
+		.iieung-top {
+			top: -101px;
+			right: -391px;
+		}
+	}
+
 	@media (max-width: 768px) {
 		img {
-			display: none;
+			opacity: 0;
 		}
 	}
 </style>

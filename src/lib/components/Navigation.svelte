@@ -41,7 +41,7 @@
 		backdrop-filter: blur(10px);
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		div {
 			height: 70px;
 			padding: 0px 20px;

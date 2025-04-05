@@ -32,7 +32,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 100px;
+		gap: 70px;
 
 		background-color: var(--navy);
 	}
@@ -62,14 +62,14 @@
 		gap: 30px;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		section {
 			padding: 100px 0;
 		}
 
 		#main-container {
 			flex-direction: column;
-			gap: 50px;
+			gap: 30px;
 		}
 
 		#textbox {
@@ -79,6 +79,7 @@
 
 		img {
 			width: 90%;
+			max-width: 500px;
 			height: auto;
 		}
 	}
