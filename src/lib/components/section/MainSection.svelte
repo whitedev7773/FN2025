@@ -15,11 +15,7 @@
 			>함수달이 준비한 첫번째 세미나</Text
 		>
 	</div>
-	<a
-		class="shadow-for-dark"
-		href="https://docs.google.com/forms/d/10d30iOI2bHDYqljQaq73zVONoJHoEGp7UIdbnCkpdWs/edit"
-		target="_blank"
-	>
+	<a class="shadow-for-dark" href="https://forms.gle/VqsXHteoYACPghYC6" target="_blank">
 		<Text
 			color="white"
 			fontSize="24px"
