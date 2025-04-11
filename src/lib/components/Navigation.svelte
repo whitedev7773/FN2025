@@ -26,7 +26,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 0px 60px;
-		height: 90px;
+		height: 80px;
 		box-sizing: border-box;
 
 		user-select: none;

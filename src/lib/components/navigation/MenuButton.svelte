@@ -26,7 +26,7 @@
 		position: relative;
 		text-decoration: none;
 		color: inherit;
-		font-size: 19px;
+		font-size: 18px;
 		font-weight: 700;
 
 		display: flex;
