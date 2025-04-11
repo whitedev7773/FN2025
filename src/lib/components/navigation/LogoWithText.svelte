@@ -3,7 +3,7 @@
 
 	export let text = '';
 
-	const logo_size = '48px';
+	const logo_size = '42px';
 </script>
 
 <div>
@@ -19,7 +19,7 @@
 	}
 
 	p {
-		font-size: 25px;
+		font-size: 22px;
 		font-weight: 700;
 	}
 
