@@ -14,7 +14,7 @@
 		<div id="textbox" class="text-with-label-1">
 			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">경북대학교 대구캠퍼스</Text>
 			<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="14px"
-				>IT대학 5호관 지하1층 102호</Text
+				>IT대학 5호관 B102호 (지하)</Text
 			>
 		</div>
 	</div>
