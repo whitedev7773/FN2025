@@ -3,11 +3,10 @@
 	import Text from '$lib/components/Text.svelte';
 
 	import funSudal from '$lib/assets/sponser/funsudal.png';
-	import swKnuEdu from '$lib/assets/sponser/sw_knu_edu.png';
 
 	export let id = '';
 
-	const logo_list = [funSudal, swKnuEdu];
+	const logo_list = [funSudal];
 </script>
 
 <section {id}>
