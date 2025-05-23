@@ -36,16 +36,21 @@
 		formData.append('entry.383730365', agree_to_terms ? '동의함' : ''); // agree_to_terms 필드
 		formData.append('entry.1499024358', agree_to_conduct ? '동의함' : ''); // agree_to_conduct 필드
 
-		await fetch(
-			`https://docs.google.com/forms/d/e/1FAIpQLSc0ilxatCDyqAGMGzYxBhu4SUpsPpugiTanlyqFpimvLCSH5w/formResponse`,
-			{
-				method: 'POST',
-				mode: 'no-cors',
-				body: formData
-			}
-		);
-
-		alert('제출 완료!');
+		try {
+			await fetch(
+				`https://docs.google.com/forms/d/e/1FAIpQLSc0ilxatCDyqAGMGzYxBhu4SUpsPpugiTanlyqFpimvLCSH5w/formResponse`,
+				{
+					method: 'POST',
+					mode: 'no-cors',
+					body: formData
+				}
+			);
+			alert('신청서가 제출되었습니다. 감사합니다!');
+		} catch (error) {
+			console.error('Error submitting form:', error);
+			alert('신청서 제출에 실패했습니다. 다시 시도해주세요.\n계속 반복될 경우 문의해주세요.');
+			return;
+		}
 	};
 </script>
 
@@ -71,7 +76,6 @@
 				type="email"
 				bind:value={email}
 				placeholder="example@email.com"
-				pattern={`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`}
 				class="input"
 				required
 			/>
@@ -84,7 +88,6 @@
 				type="tel"
 				bind:value={phone}
 				placeholder="- 기호 없이 입력"
-				pattern={`^01[016789]\\d{3,4}\\d{4}$`}
 				class="input"
 				required
 			/>
@@ -93,6 +96,7 @@
 		<div class="form-group">
 			<label for="inflow" class="label">유입 경로 *</label>
 			<select id="inflow" bind:value={inflow_selected} class="select" required>
+				<option value="" disabled selected>유입 경로를 선택해주세요</option>
 				{#each inflow_option as option}
 					<option value={option}>{option}</option>
 				{/each}
@@ -404,6 +408,7 @@
 	/* 모바일 대응 */
 	@media (max-width: 768px) {
 		.form {
+			width: calc(100% - 40px);
 			gap: 20px;
 		}
 
