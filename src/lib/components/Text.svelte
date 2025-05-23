@@ -88,7 +88,7 @@
 	this={tag}
 	bind:this={element}
 	class={className}
-	style={`${computedStyle}; opacity: ${isVisible ? 1 : 0}; transition: opacity 0.6s 0.3s;`}
+	style={`${computedStyle}; opacity: ${isVisible ? 1 : 0}; transition: opacity 0.6s;`}
 >
 	<slot />
 </svelte:element>

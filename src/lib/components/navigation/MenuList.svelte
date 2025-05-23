@@ -23,7 +23,8 @@
 		{ text: 'INTRODUCTION', scroll_to: '#introducion' },
 		{ text: 'SESSION', scroll_to: '#sessions' },
 		{ text: 'SPONSERS', scroll_to: '#sponsers' },
-		{ text: 'LOCATION', scroll_to: '#location' }
+		{ text: 'LOCATION', scroll_to: '#location' },
+		{ text: 'APPLY', scroll_to: '#apply' }
 		// { text: 'FAQ', scroll_to: '#faq' }
 	];
 

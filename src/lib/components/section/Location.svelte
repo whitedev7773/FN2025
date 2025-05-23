@@ -12,9 +12,9 @@
 	<div id="main-container">
 		<img src={MapImage} alt="map" height="340px" />
 		<div id="textbox" class="text-with-label-1">
-			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">경북대학교 대구캠퍼스</Text>
+			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">롯데백화점 상인점</Text>
 			<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="14px"
-				>글로벌플라자 세미나실 201호(GP201)</Text
+				>나중에 상세 주소 적기</Text
 			>
 		</div>
 	</div>
