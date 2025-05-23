@@ -3,10 +3,12 @@
 	import Text from '$lib/components/Text.svelte';
 
 	import funSudal from '$lib/assets/sponser/funsudal.png';
+	import lotte from '$lib/assets/sponser/lotte.png';
 
 	export let id = '';
 
-	const logo_list = [funSudal];
+	const logo_list = [funSudal, lotte];
+	logo_list.reverse();
 </script>
 
 <section {id}>
