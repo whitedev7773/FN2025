@@ -46,6 +46,17 @@
 				}
 			);
 			alert('신청서가 제출되었습니다. 감사합니다!');
+
+			// Reset form fields
+			name = '';
+			email = '';
+			phone = '';
+			is_deposited = false;
+			bank_account = '';
+			inflow_selected = '';
+			comment = '';
+			agree_to_terms = false;
+			agree_to_conduct = false;
 		} catch (error) {
 			console.error('Error submitting form:', error);
 			alert('신청서 제출에 실패했습니다. 다시 시도해주세요.\n계속 반복될 경우 문의해주세요.');

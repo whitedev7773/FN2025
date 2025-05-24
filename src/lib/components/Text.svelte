@@ -72,7 +72,7 @@
 					isVisible = entry.isIntersecting;
 				});
 			},
-			{ threshold: 1 } // 100% 보이면 트리거
+			{ threshold: 0.75 } // 75% 보이면 트리거
 		);
 
 		if (element) observer.observe(element);
