@@ -12,10 +12,17 @@
 			><span style="color: var(--dark-green)">FN</span> 2025</Text
 		>
 		<Text fontSize="40px" fontWeight="400" textAlign="center" mobileFontSize="24px"
-			>함수달이 준비한 첫번째 세미나</Text
+			>함수달이 준비한 두번째 이야기</Text
 		>
 	</div>
-	<a class="shadow-for-dark" href="https://forms.gle/VqsXHteoYACPghYC6" target="_blank">
+	<button
+		class="shadow-for-dark"
+		on:click={() => {
+			const element = document.getElementById('apply');
+			if (!element) return;
+			element.scrollIntoView({ behavior: 'smooth' });
+		}}
+	>
 		<Text
 			color="white"
 			fontSize="24px"
@@ -25,7 +32,7 @@
 			style="text-decoration: none;"
 			disable_animation={true}>참가 신청하기</Text
 		>
-	</a>
+	</button>
 </section>
 
 <style>
@@ -45,7 +52,7 @@
 		gap: 30px;
 	}
 
-	a {
+	button {
 		border: none;
 		outline: none;
 		text-decoration: none;
@@ -69,7 +76,7 @@
 			gap: 10px;
 		}
 
-		a {
+		button {
 			width: 200px;
 			height: 50px;
 			border-radius: 25px;

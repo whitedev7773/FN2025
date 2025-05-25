@@ -19,6 +19,7 @@
 	import Sponser from '$lib/components/section/Sponser.svelte';
 	import Location from '$lib/components/section/Location.svelte';
 	import Decoration from '$lib/components/section/Decoration.svelte';
+	import ApplyForm from '$lib/components/section/ApplyForm.svelte';
 
 	// sectionScrollY에 div의 스크롤값 저장
 	onMount(() => {
@@ -50,9 +51,10 @@
 <Introduction id="introducion" />
 <Brand id="fn2025" />
 <Session id="sessions" />
-<Lecturer id="lecturer" />
+<!-- <Lecturer id="lecturer" /> -->
 <Sponser id="sponsers" />
 <Location id="location" />
+<ApplyForm id="apply" />
 <Decoration id="fn2025" />
 <Footer />
 

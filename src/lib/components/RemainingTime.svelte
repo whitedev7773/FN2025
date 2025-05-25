@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DateBox from './remaining_time/DateBox.svelte';
 
-	export let targetDate: Date = new Date('2025-04-30T09:00:00');
+	export let targetDate: Date = new Date('2025-05-29T18:00:00');
 
 	import { onMount } from 'svelte';
 
@@ -13,6 +13,14 @@
 	const updateRemainingTime = () => {
 		const currentDate = new Date();
 		let remainingTime = targetDate.getTime() - currentDate.getTime();
+
+		if (remainingTime < 0) {
+			remainingDays = 0;
+			remainingHours = 0;
+			remainingMinutes = 0;
+			remainingSeconds = 0;
+			return;
+		}
 
 		remainingTime = Math.floor(remainingTime / 1000);
 

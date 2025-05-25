@@ -72,7 +72,7 @@
 					isVisible = entry.isIntersecting;
 				});
 			},
-			{ threshold: 1 } // 100% 보이면 트리거
+			{ threshold: 0.75 } // 75% 보이면 트리거
 		);
 
 		if (element) observer.observe(element);
@@ -88,7 +88,7 @@
 	this={tag}
 	bind:this={element}
 	class={className}
-	style={`${computedStyle}; opacity: ${isVisible ? 1 : 0}; transition: opacity 0.6s 0.3s;`}
+	style={`${computedStyle}; opacity: ${isVisible ? 1 : 0}; transition: opacity 0.6s;`}
 >
 	<slot />
 </svelte:element>
