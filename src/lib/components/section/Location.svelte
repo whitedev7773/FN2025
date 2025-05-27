@@ -14,7 +14,7 @@
 		<div id="textbox" class="text-with-label-1">
 			<Text fontSize="34px" fontWeight="600" mobileFontSize="20px">롯데백화점 상인점</Text>
 			<Text fontSize="19px" fontWeight="500" color="#A5A5A5" mobileFontSize="14px"
-				>7층 문화 센터 (4번 강의실실)</Text
+				>7층 문화 센터 (4번 강의실)</Text
 			>
 		</div>
 	</div>
