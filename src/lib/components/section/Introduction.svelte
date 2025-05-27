@@ -37,6 +37,14 @@
 		>펑의 시작까지 이만큼 남았어요</Text
 	>
 	<RemainingTime />
+	<Text
+		color="grey"
+		fontSize="16px"
+		fontWeight="400"
+		textAlign="center"
+		mTop="20px"
+		mobileFontSize="16px">2025년 5월 29일 18시 30분</Text
+	>
 </section>
 
 <style>
